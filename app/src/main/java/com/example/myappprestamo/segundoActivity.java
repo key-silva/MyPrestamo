@@ -85,7 +85,7 @@ public class segundoActivity extends AppCompatActivity implements View.OnClickLi
                 String plass = paa.getText().toString();
 
                 if (va1.equals("")) {
-                    monto1.setError("Ingresar Monto");
+                    monto1.setError("Campo Obligatorio");
                     Montototal1.setText("");
                     MontoCuotas1.setText("");
                     fechaInicio1.setText("");
@@ -112,7 +112,7 @@ public class segundoActivity extends AppCompatActivity implements View.OnClickLi
 
 
 
-                    //meses Inicial
+                    //mes Inicial
                     final Calendar c = Calendar.getInstance();
                     int ano = c.get(Calendar.YEAR);
                     int mes = c.get(Calendar.MONDAY);
@@ -122,14 +122,14 @@ public class segundoActivity extends AppCompatActivity implements View.OnClickLi
 
                     EditText valor1 = findViewById(R.id.editTextplazo);
                     if (plass.equals("")) {
-                        //meses Final
+                        //mes Final
                         final Calendar cc = Calendar.getInstance();
                         int ano1 = cc.get(Calendar.YEAR);
                         int mes1 = cc.get(Calendar.MONDAY);
                         int dia1 = cc.get(Calendar.DAY_OF_MONTH);
                         String ssc = String.valueOf(dia1 + "/" + (mes1 + 1) + "/" + ano1);
                         fechaFinal1.setText(ssc);
-                        valor1.setError("Ingresar Monto porfavor");
+                        valor1.setError("Campo Obligatorio");
 
 
                     } else {
@@ -144,7 +144,7 @@ public class segundoActivity extends AppCompatActivity implements View.OnClickLi
 
                         if (valor == 0 || valor11.equals("")) {
 
-                            //meses Final
+                            //mes Final
                             final Calendar cc = Calendar.getInstance();
                             int ano1 = cc.get(Calendar.YEAR);
                             int mes1 = cc.get(Calendar.MONDAY);
@@ -152,7 +152,7 @@ public class segundoActivity extends AppCompatActivity implements View.OnClickLi
                             String ssc = String.valueOf(dia1 + "/" + (mes1 + 1) + "/" + ano1);
                             fechaFinal1.setText(ssc);
                         } else {
-                            //meses Final
+                            //mes Final
                             final Calendar cc = Calendar.getInstance();
                             int ano1 = cc.get(Calendar.YEAR);
                             int mes1 = cc.get(Calendar.MONDAY);
@@ -181,9 +181,9 @@ public class segundoActivity extends AppCompatActivity implements View.OnClickLi
             EditText Nr = findViewById(R.id.editTextmonto);
 
             if(valor.equals("")){
-                Nr.setError("Ingresar un Monto Porfavor");
+                Nr.setError("Campo Obligatorio");
             }else{
-                Toast.makeText(segundoActivity.this,"Gracias Por su Registro .....", Toast.LENGTH_SHORT).show();
+                Toast.makeText(segundoActivity.this,"Solicitud enviada", Toast.LENGTH_SHORT).show();
             }
 
         }

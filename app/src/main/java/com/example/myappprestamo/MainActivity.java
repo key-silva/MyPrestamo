@@ -24,30 +24,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             EditText nombre=findViewById(R.id.editTextnombre);
             String cadena1=nombre.getText().toString();
             if(cadena1.equals("")){
-                nombre.setError("Ingresar Nombre");
+                nombre.setError("Campo Obligatorio");
             }
 
             EditText telefono=findViewById(R.id.editTexttetefono);
             String cadena2=telefono.getText().toString();
             if(cadena2.equals("")){
-                telefono.setError("Ingresar Telefono");
+                telefono.setError("Campo Obligatorio");
             }
             EditText cedula=findViewById(R.id.editTextcedula);
             String cadena3=cedula.getText().toString();
             if(cadena2.equals("")){
-                cedula.setError("Ingresar Cedula");
+                cedula.setError("Campo Obligatorio");
             }
             EditText direccion=findViewById(R.id.editTextdireccion);
             String cadena4=direccion.getText().toString();
             if(cadena2.equals("")){
-                direccion.setError("Ingresar Direccion");
+                direccion.setError("Campo Obligatorio");
             }
             if(!cadena1.equals("") && !cadena2.equals("") && !cadena3.equals("") && !cadena4.equals("")){
                 Intent intent=new Intent(this,segundoActivity.class);
                 startActivity(intent);
 
-            }else{
-                Toast.makeText(MainActivity.this,"LLenar todos campos", Toast.LENGTH_SHORT).show();
             }
 
         }
